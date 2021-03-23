@@ -280,18 +280,106 @@ p{
     padding-top: 5px;
 }
 
-.first img {
-    height: 100%;
-    width: 100%;
+#devis .col-md-6
+{
+    height: 50vh;
 }
 
-.second img {
-    height: 100%;
-    width: 100%;
+#devis h6
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #198754;
+    opacity: 1;
 }
 
-#devisCouleur img{
-    width: 50%;
+#ronde
+{
+    background-image: url('../img/ronde.jpg');
+}
+
+#rectangulaire
+{
+    background-image: url('../img/rectangulaire.jpg');
+}
+
+#plate
+{
+    background-image: url('../img/plat.png');
+}
+
+#enPente
+{
+    background-image: url('../img/pente.jpg');
+}
+
+#blanc
+{
+    background-color: white;
+
+}
+
+#bleu
+{
+    background-color: #3498DB;
+}
+
+#jaune
+{
+    background-color: #F7DC6F;
+}
+
+#rouge
+{
+    background-color: #E74C3C;
+}
+
+#vert
+{
+    background-color: #2ECC71;
+}
+
+#rose
+{
+    background-color: #F08080;
+}
+
+#orange
+{
+    background-color: #EB984E;
+}
+
+.img-devis
+{
+
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.color-devis
+{
+    height: 8vw;
+    width: 8vw;
+}
+
+#barre-devis
+{
+    background-color: #6fa8dc;
+}
+
+#barre-devis h2
+{
+    text-transform: uppercase;
+    color: white;
+}
+
+#barre-devis .progress {
+    height: 1vh;
 }
 
 

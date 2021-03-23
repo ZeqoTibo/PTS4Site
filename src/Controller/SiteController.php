@@ -22,12 +22,8 @@ class SiteController extends AbstractController
     /**
      * @Route("/devis1", name="forme")
      */
-    public function devis(Request $request): Response
+    public function devis(): Response
     {
-        $session = $request->getSession();
-        $maReponse = $session->get('maReponse');
-        if (isset($maReponse))
-
         return $this->render('site/forme.html.twig', [
             'controller_name' => 'SiteController',
         ]);
@@ -55,14 +51,4 @@ class SiteController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/reponse/{choix}", name="reponse")
-     */
-    public function add($choix, Request $request){
-
-        $session->set('reponse', $choix);
-        dd($session->get('reponse'));
-
-
-    }
 }

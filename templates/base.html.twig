@@ -24,7 +24,7 @@
     {% endblock %}
 
     {% block javascript %}
-
+    <script type="text/javascript" src="../js/Save.js"></script>
     {% endblock %}
 </head>
 <body>
@@ -50,52 +50,52 @@
     </nav>
 </header>
 {% block body %}{% endblock %}
-  <footer class="container-fluid">
+<footer class="container-fluid">
 
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <img src="img/logo-inverse.png" alt="logo du site - bas de page">
-                </div>
-                <div class="col-md-3">
-                    <h3><a href="{{ path('accueil') }}" >Accueil</a></h3>
-                    <ul>
-                        <li><a href="histoire">L'histoire de la piscine</a></li>
-                        <li><a href="typesdepiscines">Les types de piscines</a></li>
-                        <li><a href="realisations">Nos réalisations</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h3><a href="{{ path('forme') }}">Faire un devis</a></h3>
-                    <ul>
-                        <li><a href="ronde" >Piscines creusées ronde</a></li>
-                        <li><a href="rectangle" >Piscines creusées rectangulaire</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h3><a href="{{ path('contact') }}" >A propos de nous</a></h3>
-                    <ul>
-                        <li><a href="#quisommesnous">Qui sommes-nous</a></li>
-                        <li><a href="#entreprise">L'entreprise</a></li>
-                        <li><a href="contact">Nous contacter</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 text-center" >
-                    <h3>TOPISCINE</h3>
-                </div>
-                <div id="reseaux_sociaux" class="col-md-3">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-facebook-square"></i>
-                </div>
-                <div class="col-md-3">
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <img src="img/logo-inverse.png" alt="logo du site - bas de page">
+        </div>
+        <div class="col-md-3">
+            <h3><a href="{{ path('accueil') }}">Accueil</a></h3>
+            <ul>
+                <li><a href="histoire">L'histoire de la piscine</a></li>
+                <li><a href="typesdepiscines">Les types de piscines</a></li>
+                <li><a href="realisations">Nos réalisations</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3><a href="{{ path('forme') }}">Faire un devis</a></h3>
+            <ul>
+                <li><a href="ronde">Piscines creusées ronde</a></li>
+                <li><a href="rectangle">Piscines creusées rectangulaire</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3><a href="{{ path('contact') }}">A propos de nous</a></h3>
+            <ul>
+                <li><a href="#quisommesnous">Qui sommes-nous</a></li>
+                <li><a href="#entreprise">L'entreprise</a></li>
+                <li><a href="contact">Nous contacter</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <h3>TOPISCINE</h3>
+        </div>
+        <div id="reseaux_sociaux" class="col-md-3">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-square"></i>
+        </div>
+        <div class="col-md-3">
 
-                </div>
-                <div class="col-md-3">
-                    <p>Tout droits réservés Topiscine <i class="far fa-copyright"></i></p>
-                </div>
-            </div>
-        </footer>
+        </div>
+        <div class="col-md-3">
+            <p>Tout droits réservés Topiscine <i class="far fa-copyright"></i></p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

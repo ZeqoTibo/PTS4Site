@@ -20,7 +20,7 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/devis1", name="forme")
+     * @Route("/devisForme1", name="forme")
      */
     public function devis(): Response
     {
@@ -32,11 +32,21 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/devis2", name="fond")
+     * @Route("/devisFond2", name="fond")
      */
-    public function next(): Response
+    public function fond(): Response
     {
         return $this->render('site/fond.html.twig', [
+            'controller_name' => 'SiteController',
+        ]);
+    }
+
+    /**
+     * @Route("/devisCouleur3", name="couleur")
+     */
+    public function couleur(): Response
+    {
+        return $this->render('site/couleur.html.twig', [
             'controller_name' => 'SiteController',
         ]);
     }

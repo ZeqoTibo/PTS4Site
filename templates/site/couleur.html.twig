@@ -1,0 +1,98 @@
+
+{% extends 'base.html.twig' %}
+{% block title %}TOPISCINE{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN : CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Bootstrap CDN : JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="../js/Save.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div id="devisCouleur" class="container pt-5">
+        <div class="row ">
+
+            <div class="col-md-3 d-flex justify-content-center align-items-center">
+
+                <figure>
+                    <button class="first btn btn-outline-primary p-4">
+                        <img src="img/rose.png">
+                    </button>
+                    <figcaption class="text-center">Rose</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 d-flex justify-content-center align-items-center ">
+                <figure>
+                    <button id="button" class="second btn btn-outline-primary p-4 ">
+                        <img src="img/blanc.jpg">
+                    </button>
+                    <figcaption class="text-center">Blanc</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 d-flex justify-content-center align-items-center ">
+                <figure>
+                    <button id="button" class="second btn btn-outline-primary p-4 ">
+                        <img src="img/bleu.jpg">
+                    </button>
+                    <figcaption class="text-center">Bleu</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-3 d-flex justify-content-center align-items-center ">
+                <figure>
+                    <button id="button" class="second btn btn-outline-primary p-4 ">
+                        <img src="img/beige.jpg">
+                    </button>
+                    <figcaption class="text-center">Beige</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center align-items-center ">
+                <figure>
+                    <button id="button" class="second btn btn-outline-primary p-4 ">
+                        <img src="img/gris.jpg">
+                    </button>
+                    <figcaption class="text-center">Gris</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center align-items-center ">
+                <figure>
+                    <button id="button" class="second btn btn-outline-primary p-4 ">
+                        <img src="img/vert.jpg">
+                    </button>
+                    <figcaption class="text-center">Vert</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center align-items-center ">
+                <figure>
+                    <button id="button" class="second btn btn-outline-primary p-4 ">
+                        <img src="img/orange.jpg">
+                    </button>
+                    <figcaption class="text-center">Orange</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center mb-3">
+                <a href="{{ path('fond') }}">
+                    <button id="submit" type="submit" class="btn btn-primary">Suivant</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

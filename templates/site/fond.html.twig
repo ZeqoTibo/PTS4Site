@@ -13,27 +13,38 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script type="text/javascript" src="../../public/js/Save.js"></script>
+    <script type="text/javascript" src="../js/Save.js"></script>
 {% endblock %}
 
 {% block body %}
-    <div class="container">
-        <div class="row mt-md-5 mb-md-5">
+    <div id="devis" class="container pt-5">
+        <div class="row ">
 
-            <div class="col-6">
-                <button class="first btn btn-outline-primary w-100 p-4 h-100"><img src="img/pente.jpg"></button>
-                <p>Pente</p>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+
+                <figure>
+                    <button class="first btn btn-outline-primary p-4">
+                        <img src="img/pente.jpg">
+                    </button>
+                    <figcaption class="text-center">Pente</figcaption>
+                </figure>
             </div>
 
-            <div class="col-6">
-                <button id="button" class="second btn btn-outline-primary w-100 p-4 h-100"><img src="img/plat.png"></button>
-                <p>Plâte</p>
+            <div class="col-md-6 d-flex justify-content-center align-items-center ">
+                <figure>
+                    <button id="button" class="second btn btn-outline-primary p-4 ">
+                        <img src="img/plat.png">
+                    </button>
+                    <figcaption class="text-center">Plât</figcaption>
+                </figure>
             </div>
 
         </div>
-        <div class="row mt-md-5">
-            <div class="text-center">
-                <button id="submit" class="btn btn-primary " onclick="submit()">Submit</button>
+        <div class="row">
+            <div class="col-md-12 text-center mb-3">
+                <a href="{{ path('couleur') }}">
+                    <button id="submit" type="submit" class="btn btn-primary">Suivant</button>
+                </a>
             </div>
         </div>
 

@@ -52,6 +52,16 @@ class SiteController extends AbstractController
     }
 
     /**
+     * @Route("/devisTailleRect4", name="tailleRect")
+     */
+    public function tailleRect(): Response
+    {
+        return $this->render('site/tailleRect.html.twig', [
+            'controller_name' => 'SiteController',
+        ]);
+    }
+
+    /**
      * @Route("/contact", name="contact")
      */
     public function contact(): Response

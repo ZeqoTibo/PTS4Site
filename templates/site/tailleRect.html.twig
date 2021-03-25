@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block title %}TOPISCINE - Devis - Forme{% endblock %}
+
+
+{% block class1 %}{% endblock %}
+{% block class2 %}border_section{% endblock %}
+{% block class3 %}{% endblock %}
+
+{% block body %}
+<div id="barre-devis" class="container-fluid mb-4 pt-2">
+    <div class="row">
+        <div class="col-md-12 text-center p-0 ">
+            <h2>Faire un devis</h2>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%"
+                     aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="devis" class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h5>Choix de la taille pour la piscine</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <label class="form-label" for="customRange1">Longueur</label>
+            <div class="range">
+                <input id="slider1" type="range" class="form-range" min="5" max="25" value="5" oninput="document.getElementById('longueur').innerHTML = this.value"/>
+            </div>
+        </div>
+        <div class="col-sm d-flex align-items-center">
+            <label id="longueur">5</label>
+        </div>
+    </div>
+</div>
+    {% endblock %}

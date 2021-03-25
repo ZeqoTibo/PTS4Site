@@ -20,7 +20,7 @@ body
 
 p
 {
-    font-size: 0.6em;
+    font-size: 1em;
 }
 
 h4
@@ -272,6 +272,10 @@ footer img:hover
 #devis img{
     height:auto;
     width: 30vw;
+}
+
+#devis .contour {
+    -webkit-text-stroke: 0.5px black;
 }
 
 

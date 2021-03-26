@@ -20,7 +20,7 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/devisForme1", name="forme")
+     * @Route("/pageDevis", name="pageDevis")
      */
     public function devis(): Response
     {

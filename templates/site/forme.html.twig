@@ -25,27 +25,35 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 d-flex justify-content-center align-items-center ">
-                <button id="rectangulaire" class="img-devis btn border border-light rounded">
+            <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+                <button onclick="remplirInputRectangulaire(event)" id="rectangulaire" class="img-devis btn border border-light rounded">
                     <h6 class="text-center ">Rectangulaire</h6>
                 </button>
+                <i id="awesome-rect" class="fa fa-check-square" aria-hidden="true"></i>
             </div>
 
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
 
-                <button id="ronde" class="img-devis btn border border-light rounded-circle">
+                <button onclick="remplirInputRonde(event)" id="ronde" class="img-devis btn border border-light rounded-circle">
                     <h6 class="text-center ">Ronde</h6>
                 </button>
+                <i id="awesome-rond" class="fa fa-check-square" aria-hidden="true"></i>
 
 
             </div>
         </div>
-
         <div class="row">
-            <div class="col-md-12 text-center mb-3 mt-3">
-                <a href="{{ path('fond') }}">
-                    <button id="submit" type="submit" class="btn btn-success">Suivant</button>
-                </a>
+            <div class="col-md-12 text-center mb-3">
+                <form action="/etapeVersFond" method="post">
+                    <div class="input-group mb-3 w-50 text-center hidden">
+                        <div class="input-group-prepend" >
+                            <span class="input-group-text" id="basic-addon1">Choix</span>
+                        </div>
+                        <input name="choix1" id="choix" type="text" class="form-control" placeholder="Choix" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <input id="submit" type="submit" value="Suivant"  class="btn btn-success">
+                </form>
+
             </div>
         </div>
 

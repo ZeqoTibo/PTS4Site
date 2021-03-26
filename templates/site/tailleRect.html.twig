@@ -10,7 +10,11 @@
 <div id="barre-devis" class="container-fluid mb-4 pt-2">
     <div class="row">
         <div class="col-md-12 text-center p-0 ">
-            <h2>Faire un devis</h2>
+            <div class="d-flex flex-row  align-items-center justify-content-between container-fluid">
+                <a href="/etapeVersCouleur"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                <h2>Faire un devis</h2>
+                <h5></h5>
+            </div>
             <div class="progress">
                 <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%"
                      aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -24,17 +28,28 @@
             <h5>Choix de la taille pour la piscine</h5>
         </div>
     </div>
-
     <div class="row">
-        <div class="col-sm">
-            <label class="form-label" for="customRange1">Longueur</label>
-            <div class="range">
-                <input id="slider1" type="range" class="form-range" min="5" max="25" value="5" oninput="document.getElementById('longueur').innerHTML = this.value"/>
-            </div>
-        </div>
-        <div class="col-sm d-flex align-items-center">
-            <label id="longueur">5</label>
+        <div class="col-md-12 text-center mb-3 mt-3">
+            <form action="/etapeVersOption" method="post">
+                <div class="input-group text-center d-flex justify-content-center flex-column mb-3">
+                        <label class="form-label text-center" for="customRange1">Longueur</label>
+                        <div class="input-group-prepend text-center ">
+                            <input id="slider1" type="range" class="form-range" min="4" max="20" value="12" oninput="document.getElementById('longueur').innerHTML = this.value"/>
+                            <label name="longueur" id="longueur">12</label>
+                        </div>
+                </div>
+                <div class="input-group text-center d-flex justify-content-center flex-column mb-3">
+                    <label class="form-label text-center" for="customRange1">Largeur</label>
+                    <div class="input-group-prepend text-center ">
+                        <input id="slider1" type="range" class="form-range " min="4" max="20" value="12" oninput="document.getElementById('largeur').innerHTML = this.value"/>
+                        <label name="largeur" id="largeur">12</label>
+                    </div>
+                </div>
+                <input id="submit" type="submit" value="Suivant"  class="btn btn-success">
+            </form>
+
         </div>
     </div>
+
 </div>
     {% endblock %}

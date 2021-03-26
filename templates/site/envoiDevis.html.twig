@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block title %}TOPISCINE - Accueil{% endblock %}
+
+{% block class1 %}{% endblock %}
+{% block class2 %}border_section{% endblock %}
+{% block class3 %}{% endblock %}
+
+
+{% block body %}
+    <div id="barre-devis" class="container-fluid mb-4 pt-2">
+        <div class="row">
+            <div class="col-md-12 text-center p-0 ">
+                <h2>Faire un devis</h2>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%"
+                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="devis" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Formulaire d'envoi</h5>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-md-12">
+                <form action="/envoiDevis" method="post">
+                    <label>Email</label>
+                    <input type="email" name="email" required><br>
+                    <label>Message</label>
+                    <textarea name="message" required></textarea><br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>-->
+
+        {{ form(devisForm) }}
+    </div>
+
+
+{% endblock %}

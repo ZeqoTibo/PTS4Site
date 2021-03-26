@@ -386,6 +386,32 @@ p{
     height: 1vh;
 }
 
+#barre-devis .fa-arrow-left
+{
+    color: white;
+}
+
+#barre-devis .fa-arrow-left:hover
+{
+    color: #373741;
+}
+
+
+#devis .row .fa-check-square, #devis-couleur .row .fa-check-square
+{
+    visibility: hidden;
+    color: #198754;
+}
+
+.hidden
+{
+    visibility: hidden;
+}
+
+#devis .row .form-range
+{
+    width: 30vw;
+}
 
 
 /* --------------------------------------------- A PROPOS DE NOUS --------------------------------------------- */

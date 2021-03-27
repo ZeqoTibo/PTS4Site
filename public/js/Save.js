@@ -100,6 +100,8 @@ function remplirInputPlat(event) {
 
     const img_rect = document.getElementById('awesome-pente');
     img_rect.style.visibility = 'hidden';
+
+
 }
 
 function remplirInputBlanc(event) {

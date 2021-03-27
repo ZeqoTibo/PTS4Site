@@ -30,14 +30,14 @@
         </div>
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
-                <button  onclick="remplirInputPente(event)" id="enPente" class="img-devis btn border border-light rounded">
+                <button  onclick="remplirInputPente(event);disabledButton()" id="enPente" class="img-devis btn border border-light rounded">
                    En Pente
                 </button>
                 <i id="awesome-pente" class="fa fa-check-square" aria-hidden="true"></i>
             </div>
 
             <div  class="col-md-6 d-flex justify-content-center align-items-center flex-column">
-                <button  onclick="remplirInputPlat(event)" id="plate" class="img-devis btn border border-light rounded-circle">
+                <button  onclick="remplirInputPlat(event);disabledButton()" id="plate" class="img-devis btn border border-light rounded-circle">
                    Plâte
                 </button>
                 <i id="awesome-plat" class="fa fa-check-square" aria-hidden="true"></i>
@@ -52,7 +52,7 @@
                         </div>
                         <input name="choix2" id="choix" type="text" class="form-control" placeholder="Choix" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <input id="submit" type="submit" value="Suivant"  class="btn btn-success">
+                    <input id="submit" type="submit" value="Suivant"  class="btn btn-success" disabled="true">
                 </form>
 
             </div>

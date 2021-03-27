@@ -34,23 +34,23 @@
             <div class="col-md-2 d-flex justify-content-center align-items-center">
             </div>
             <div class="col-md-2 d-flex justify-content-center align-items-center flex-column">
-                <button onclick="remplirInputBlanc(event)" id="blanc" class="color-devis btn border border-dark rounded-circle">
+                <button onclick="remplirInputBlanc(event);disabledButton()" id="blanc" class="color-devis btn border border-dark rounded-circle">
                 </button>
                 <i id="awesome-blanc" class="fa fa-check-square" aria-hidden="true"></i>
             </div>
 
             <div class="col-md-2 d-flex justify-content-center align-items-center flex-column">
-                <button onclick="remplirInputBleu(event)" id="bleu" class="color-devis btn border border-light rounded-circle">
+                <button onclick="remplirInputBleu(event);disabledButton()" id="bleu" class="color-devis btn border border-light rounded-circle">
                 </button>
                 <i id="awesome-bleu" class="fa fa-check-square" aria-hidden="true"></i>
             </div>
             <div class="col-md-2 d-flex justify-content-center align-items-center flex-column">
-                <button onclick="remplirInputJaune(event)" id="jaune" class="color-devis btn border border-light rounded-circle">
+                <button onclick="remplirInputJaune(event);disabledButton()" id="jaune" class="color-devis btn border border-light rounded-circle">
                 </button>
                 <i id="awesome-jaune" class="fa fa-check-square" aria-hidden="true"></i>
             </div>
             <div class="col-md-2 d-flex justify-content-center align-items-center flex-column">
-                <button onclick="remplirInputRouge(event)" id="rouge" class="color-devis btn border border-light rounded-circle">
+                <button onclick="remplirInputRouge(event);disabledButton()" id="rouge" class="color-devis btn border border-light rounded-circle">
                 </button>
                 <i id="awesome-rouge" class="fa fa-check-square" aria-hidden="true"></i>
             </div>
@@ -62,18 +62,18 @@
             <div class="col-md-3 d-flex justify-content-center align-items-center">
             </div>
             <div class="col-md-2 d-flex justify-content-center align-items-center flex-column">
-                <button onclick="remplirInputVert(event)" id="vert" class="color-devis btn border border-light rounded-circle">
+                <button onclick="remplirInputVert(event);disabledButton()" id="vert" class="color-devis btn border border-light rounded-circle">
                 </button>
                 <i id="awesome-vert" class="fa fa-check-square" aria-hidden="true"></i>
             </div>
 
             <div class="col-md-2 d-flex justify-content-center align-items-center flex-column">
-                <button onclick="remplirInputRose(event)" id="rose" class="color-devis btn border border-light rounded-circle">
+                <button onclick="remplirInputRose(event);disabledButton()" id="rose" class="color-devis btn border border-light rounded-circle">
                 </button>
                 <i id="awesome-rose" class="fa fa-check-square" aria-hidden="true"></i>
             </div>
             <div class="col-md-2 d-flex justify-content-center align-items-center flex-column">
-                <button onclick="remplirInputOrange(event)" id="orange" class="color-devis btn border border-light rounded-circle">
+                <button onclick="remplirInputOrange(event);disabledButton()" id="orange" class="color-devis btn border border-light rounded-circle">
                 </button>
                 <i id="awesome-orange" class="fa fa-check-square" aria-hidden="true"></i>
             </div>
@@ -90,7 +90,7 @@
                         </div>
                         <input name="choix3" id="choix" type="text" class="form-control" placeholder="Choix" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <input id="submit" type="submit" value="Suivant"  class="btn btn-success">
+                    <input id="submit" type="submit" value="Suivant"  class="btn btn-success" disabled="true">
                 </form>
 
             </div>

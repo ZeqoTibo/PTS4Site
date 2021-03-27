@@ -18,25 +18,49 @@
             </div>
         </div>
     </div>
-    <div id="devis" class="container">
+
+
+    <div id="container" class="container mb-5 mt-5 p-3 w-50 bg-transparent bg-gradient rounded">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center mb-5">
                 <h5>Formulaire d'envoi</h5>
             </div>
         </div>
-        <!--<div class="row">
-            <div class="col-md-12">
-                <form action="/envoiDevis" method="post">
-                    <label>Email</label>
-                    <input type="email" name="email" required><br>
-                    <label>Message</label>
-                    <textarea name="message" required></textarea><br>
-                    <input type="submit">
-                </form>
+        {{ form_start(devisForm) }}
+            <div class="row mb-3">
+                <div class="form-group col-md-6">
+                    <label for="inputNom">Nom</label>
+                    {{ form_widget(devisForm.nom) }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPrenom">Prénom</label>
+                    {{ form_widget(devisForm.prenom) }}
+                </div>
             </div>
-        </div>-->
+            <div class="row mb-3">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    {{ form_widget(devisForm.email) }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputTel">Télephone</label>
+                    {{ form_widget(devisForm.tel) }}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="form-group col-md-6">
+                    <label for="selectForme">Ville</label>
+                    {{ form_widget(devisForm.ville) }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="selectHauteur">Code postal</label>
+                    {{ form_widget(devisForm.cp) }}
+                </div>
+            </div>
 
-        {{ form(devisForm) }}
+        <button type="submit" class="btn btn-success">Envoyer</button>
+
+        {{form_end(devisForm) }}
     </div>
 
 

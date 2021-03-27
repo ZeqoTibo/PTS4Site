@@ -59,9 +59,9 @@ class DevisController extends AbstractController
         $forme = $session->get('forme');
 
 
-        if ($forme == "rectangulaire") {
+        if ($forme == "Rectangulaire") {
             return $this->render('site/tailleRect.html.twig');
-        } else if ($forme == "ronde") {
+        } else if ($forme == "Ronde") {
             return $this->render('site/tailleRond.html.twig');
         }
     }

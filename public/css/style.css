@@ -417,14 +417,14 @@ p{
 /* --------------------------------------------- A PROPOS DE NOUS --------------------------------------------- */
 
 
-#contact, #entreprise
+#contactDiv, #entreprise
 {
     background-color: #6fa8dc;
     color: white;
     padding-top: 3vw;
 }
 
-#entreprise, #contact, #quisommesnous{
+#entreprise, #contactDiv, #quisommesnous{
     padding-bottom: 3vw;
 }
 
@@ -434,18 +434,18 @@ p{
     padding-bottom: 4vw;
 }
 
-#contact h2
+#contactDiv h2
 {
     font-size: 1.6em;
 }
 
-#contact h4
+#contactDiv h4
 {
     font-size: 1.1em;
     padding-bottom: 4vw;
 }
 
-#contact i
+#contactDiv i
 {
     font-size: 2em;
     margin-bottom: 0.5vw;
@@ -457,13 +457,13 @@ p{
     margin-bottom: 0.5vw;
 }
 
-#contact a
+#contactDiv a
 {
     text-decoration: none;
     color: white;
 }
 
-#contact a:hover
+#contactDiv a:hover
 {
     text-decoration: none;
     color: #373741;

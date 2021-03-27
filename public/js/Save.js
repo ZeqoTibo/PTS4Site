@@ -38,6 +38,7 @@ document.addEventListener("click", function () {
 
 /*$(document).ready(function () {
     $('input[type="submit"]').attr('disabled', true);
+
     $('input[type="text"]').on('keyup', function () {
         var text_value = $('input[name="choix1"]').val();
         if (text_value !== '') {
@@ -47,6 +48,13 @@ document.addEventListener("click", function () {
         }
     });
 });*/
+
+
+function disabledButton() {
+    document.getElementById("submit").disabled = false;
+}
+
+
 
 function remplirInputRonde(event) {
     document.getElementById('choix').value = 'Ronde';

@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block title %}TOPISCINE - Devis - Forme{% endblock %}
+{% block title %}TOPISCINE - Devis - Options{% endblock %}
 
 
 {% block class1 %}{% endblock %}
@@ -22,28 +22,58 @@
             </div>
         </div>
     </div>
-    <div id="devis" class="container">
-        <div class="row">
+    <div id="devis-option" class="container mb-3">
+        <div class="row mb-5">
             <div class="col-md-12 text-center">
                 <h5>Choix des options pour la piscine</h5>
             </div>
         </div>
+        <div class="row mb-2">
+            <div class="col-md-3 d-flex justify-content-end align-items-center">
+                <img src="img/kit.jpg" alt="photo_sac">
+            </div>
+            <div class="col-md-6 d-flex justify-content-start align-items-center flex-column">
+                <h3>Kit de filtration</h3>
+                <p>Le filtre a pour principale fonction d'éliminer les impuretés les plus importantes de l'eau de piscine (c'est le poumon de votre piscine). ... Il est à noter que l'installation d'un filtre à sable est vivement conseillé car c'est aussi le plus simple et plus facile d'utilisation.</p>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center align-items-start flex-column">
+                <button  id="button_kit" onclick="remplirInputKit(event)"  class="btn btn-primary">Ajouter</button>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-3 d-flex justify-content-end align-items-center">
+                <img src="img/sac.jpg" alt="photo_sac">
+            </div>
+            <div class="col-md-6 d-flex justify-content-start align-items-center flex-column">
+                <h3>Filtration avec sable</h3>
+                <p>Le filtre à sable recycle l'eau de la piscine grâce aux grains de sable qui retiennent les impuretés. L'entretien du sable est donc essentiel pour garantir une filtration efficace de la piscine</p>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center align-items-start flex-column">
+                <button id="button_sac" onclick="remplirInputSac(event)"  class="btn btn-primary">Ajouter</button>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-md-12 text-center mb-3 mt-3">
+            <div class="col-md-3 d-flex justify-content-end align-items-center">
+                <img src="img/alarme.jpg" alt="photo_sac">
+            </div>
+            <div class="col-md-6 d-flex justify-content-start align-items-center flex-column">
+                <h3>Alarme pour piscine</h3>
+                <p>Les alarmes pour piscine sont principalement conçues pour prévenir les risques de noyade chez les plus jeunes. Elles sont devenues une obligation légale pour éviter qu'un simple instant d'inattention finisse sur un drame tel que la chute d'un enfant dans un bassin.</p>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center align-items-start flex-column">
+                <button id="button_alarme" onclick="remplirInputAlarme(event)"  class="btn btn-primary">Ajouter</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center mb-3">
                 <form action="/envoiDevis" method="post">
-                    <div class="input-group text-center d-flex justify-content-center flex-column mb-3">
-                        <label class="form-label text-center" for="customRange1">Longueur</label>
-                        <div class="input-group-prepend text-center ">
-                            <input id="slider1" type="range" class="form-range" min="4" max="20" value="12" oninput="document.getElementById('longueur').innerHTML = this.value"/>
-                            <label name="longueur" id="longueur">12</label>
+                    <div class="input-group mb-3 w-50 text-center ">
+                        <div class="input-group-prepend" >
+                            <span class="input-group-text" id="basic-addon1">Choix</span>
                         </div>
-                    </div>
-                    <div class="input-group text-center d-flex justify-content-center flex-column mb-3">
-                        <label class="form-label text-center" for="customRange1">Largeur</label>
-                        <div class="input-group-prepend text-center ">
-                            <input id="slider1" type="range" class="form-range " min="4" max="20" value="12" oninput="document.getElementById('largeur').innerHTML = this.value"/>
-                            <label name="largeur" id="largeur">12</label>
-                        </div>
+                        <input name="optionKit"     id="optionKitId"    type="text" class="form-control" placeholder="Choix" aria-label="Username" aria-describedby="basic-addon1">
+                        <input name="optionSac"     id="optionSacId" type="text" class="form-control" placeholder="Choix" aria-label="Username" aria-describedby="basic-addon1">
+                        <input name="optionAlarme"  id="optionAlarmeId"    type="text" class="form-control" placeholder="Choix" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <input id="submit" type="submit" value="Suivant"  class="btn btn-success">
                 </form>

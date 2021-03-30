@@ -413,6 +413,17 @@ p{
     width: 30vw;
 }
 
+#devis-option .row .col-md-3 img
+{
+    width: 15vw;
+}
+
+
+#devis-option h3
+{
+    font-size: 1.3em;
+}
+
 
 /* --------------------------------------------- A PROPOS DE NOUS --------------------------------------------- */
 

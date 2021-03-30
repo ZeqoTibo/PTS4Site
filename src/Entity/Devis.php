@@ -1,31 +1,126 @@
 <?php
 
-
 namespace App\Entity;
 
+use App\Repository\DevisRepository;
+use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * @ORM\Entity(repositoryClass=DevisRepository::class)
+ */
 class Devis
 {
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
 
     /**
-     * @var etape
+     * @ORM\Column(type="string", length=255)
      */
-    private $etape;
-
+    private $Forme;
 
     /**
-     * Devis constructor.
-     * @param $etape
+     * @ORM\Column(type="string", length=255)
      */
-    public function __construct ($etape){
-        $this->etape = $etape;
+    private $Fond;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Couleur;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $largeur;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $longueur;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $diametre;
+
+    public function getId(): ?int
+    {
+        return $this->id;
     }
 
-    /**
-     * @return etape
-     */
-    public function getEtape(){
-        return $this->etape;
+    public function getForme(): ?string
+    {
+        return $this->Forme;
     }
 
+    public function setForme(string $Forme): self
+    {
+        $this->Forme = $Forme;
+
+        return $this;
+    }
+
+    public function getFond(): ?string
+    {
+        return $this->Fond;
+    }
+
+    public function setFond(string $Fond): self
+    {
+        $this->Fond = $Fond;
+
+        return $this;
+    }
+
+    public function getCouleur(): ?string
+    {
+        return $this->Couleur;
+    }
+
+    public function setCouleur(string $Couleur): self
+    {
+        $this->Couleur = $Couleur;
+
+        return $this;
+    }
+
+    public function getLargeur(): ?int
+    {
+        return $this->largeur;
+    }
+
+    public function setLargeur(?int $largeur): self
+    {
+        $this->largeur = $largeur;
+
+        return $this;
+    }
+
+    public function getLongueur(): ?int
+    {
+        return $this->longueur;
+    }
+
+    public function setLongueur(?int $longueur): self
+    {
+        $this->longueur = $longueur;
+
+        return $this;
+    }
+
+    public function getDiametre(): ?int
+    {
+        return $this->diametre;
+    }
+
+    public function setDiametre(?int $diametre): self
+    {
+        $this->diametre = $diametre;
+
+        return $this;
+    }
 }

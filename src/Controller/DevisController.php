@@ -96,36 +96,88 @@ class DevisController extends AbstractController
     public function envoieDevisAction(SessionInterface $session, Request $request,\Swift_Mailer $mailer)
     {
 
+        $optionKit = $request->request->get("optionKit", "Non");
+        $optionSac = $request->request->get("optionSac", "Non");
+        $optionAlarme = $request->request->get("optionAlarme", "Non");
+
+        $session->set('kit', $optionKit);
+        $session->set('sac', $optionSac);
+        $session->set('alarme', $optionAlarme);
+
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
+
+
+        $kit = $session->get('kit');
+        $sac = $session->get('sac');
+        $alarme = $session->get('alarme');
+
 
         $forme = $session->get('forme');
         $fond = $session->get('fond');
         $couleur = $session->get('couleur');
 
+        if($forme == 'Rectangulaire'){
+            $largeur = $session->get('largeur');
+            $longueur = $session->get('longueur');
+        } else if ($forme == 'Ronde'){
+            $diametre = $session->get('diametre');
+        }
+
         if ($form->isSubmitted() && $form->isValid()) {
-            $contact = $form->getData();
+            switch ($forme){
 
-            // ici on envoi me mail
-            $message = (new \Swift_Message('Votre Devis - TOPISCINES'))
+                default;
+                case 'Rectangulaire':
 
-                // On attribue l'expéditeur
-                ->setFrom('trochon.arthur@gmail.com')
+                    $contact = $form->getData();
 
-                // On attribue le destinataire
-                ->setTo($contact['email'])
+                    // ici on envoi me mail
+                    $message = (new \Swift_Message('Votre Devis - TOPISCINES'))
 
-                // On attribue le message avec la vue Twig
-                ->setBody(
-                    $this->renderView('emails/contact.html.twig', compact('contact', 'forme', 'fond', 'couleur')),
-                    'text/html'
-                );
+                        // On attribue l'expéditeur
+                        ->setFrom('trochon.arthur@gmail.com')
 
-            // On envoie le message
-            $mailer->send($message);
+                        // On attribue le destinataire
+                        ->setTo($contact['email'])
 
-            $this->addFlash('message', 'Votre message a été transmis, nous vous répondrons dans les meilleurs délais.'); // Permet un message flash de renvoi
-            return $this->redirectToRoute('accueil');
+                        // On attribue le message avec la vue Twig
+                        ->setBody(
+                            $this->renderView('emails/contact.html.twig', compact('contact', 'forme', 'fond', 'couleur', 'largeur', 'longueur','kit', 'sac', 'alarme')),
+                            'text/html'
+                        );
+
+                    // On envoie le message
+                    $mailer->send($message);
+
+                    $this->addFlash('message', 'Votre message a été transmis, nous vous répondrons dans les meilleurs délais.'); // Permet un message flash de renvoi
+                    return $this->redirectToRoute('accueil');
+
+                case 'Ronde':
+
+                    $contact = $form->getData();
+
+                    // ici on envoi me mail
+                    $message = (new \Swift_Message('Votre Devis - TOPISCINES'))
+
+                        // On attribue l'expéditeur
+                        ->setFrom('trochon.arthur@gmail.com')
+
+                        // On attribue le destinataire
+                        ->setTo($contact['email'])
+
+                        // On attribue le message avec la vue Twig
+                        ->setBody(
+                            $this->renderView('emails/contact.html.twig', compact('contact', 'forme', 'fond', 'couleur', 'diametre','kit', 'sac', 'alarme')),
+                            'text/html'
+                        );
+
+                    // On envoie le message
+                    $mailer->send($message);
+
+                    $this->addFlash('message', 'Votre message a été transmis, nous vous répondrons dans les meilleurs délais.'); // Permet un message flash de renvoi
+                    return $this->redirectToRoute('accueil');
+            }
         }
 
 

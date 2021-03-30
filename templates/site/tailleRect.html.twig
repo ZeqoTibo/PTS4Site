@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block title %}TOPISCINE - Devis - Forme{% endblock %}
+{% block title %}TOPISCINE - Devis - Taille{% endblock %}
 
 
 {% block class1 %}{% endblock %}
@@ -34,15 +34,15 @@
                 <div class="input-group text-center d-flex justify-content-center flex-column mb-3">
                         <label class="form-label text-center" for="customRange1">Longueur</label>
                         <div class="input-group-prepend text-center ">
-                            <input id="slider1" type="range" class="form-range" min="4" max="20" value="12" oninput="document.getElementById('longueur').innerHTML = this.value"/>
-                            <label name="longueur" id="longueur">12</label>
+                            <input name="longueur" id="slider1" type="range" class="form-range" min="4" max="20" value="12" oninput="document.getElementById('longueur').innerHTML = this.value"/>
+                            <label  id="longueur">12</label>
                         </div>
                 </div>
                 <div class="input-group text-center d-flex justify-content-center flex-column mb-3">
                     <label class="form-label text-center" for="customRange1">Largeur</label>
                     <div class="input-group-prepend text-center ">
-                        <input id="slider1" type="range" class="form-range " min="4" max="20" value="12" oninput="document.getElementById('largeur').innerHTML = this.value"/>
-                        <label name="largeur" id="largeur">12</label>
+                        <input name="largeur" id="slider1" type="range" class="form-range " min="4" max="20" value="12" oninput="document.getElementById('largeur').innerHTML = this.value"/>
+                        <label  id="largeur">12</label>
                     </div>
                 </div>
                 <input id="submit" type="submit" value="Suivant"  class="btn btn-success">

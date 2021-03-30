@@ -28,6 +28,13 @@
     <li>Forme : {{ forme }}</li>
     <li>Fond : {{ fond }}</li>
     <li>Couleur : {{ couleur }} </li>
-    <li>Taille : </li>
-    <li>Options : </li>
+    {% if forme == 'Rectangulaire' %}
+        <li>Taille: {{ largeur }} mètres de largeur par {{ longueur }} mètres de longueur</li>
+    {% endif %}
+    {% if forme == 'Ronde' %}
+        <li>Taille: {{ diametre }} mètres de diamètres</li>
+    {% endif %}
+    <li>Options Kit de filtration : {{ kit }}</li>
+    <li>Options filtration à sable : {{ sac }}</li>
+    <li>Options Alarme de sécurité : {{ alarme }}</li>
 </ul>

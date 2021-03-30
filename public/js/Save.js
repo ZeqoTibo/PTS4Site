@@ -66,6 +66,8 @@ function remplirInputRonde(event) {
     const img_rect = document.getElementById('awesome-rect');
     img_rect.style.visibility = 'hidden';
 
+
+
 }
 
 function remplirInputRectangulaire(event) {
@@ -285,4 +287,49 @@ function remplirInputOrange(event) {
     const orange = document.getElementById('awesome-orange');
     orange.style.visibility = 'visible';
 }
+
+function remplirInputKit(event) {
+    if (document.getElementById('optionKitId').value === 'Oui'){
+        document.getElementById('optionKitId').value = 'Non';
+        document.getElementById('button_kit').style.backgroundColor = '#0d6efd';
+
+
+    } else {
+        document.getElementById('optionKitId').value = 'Oui';
+        document.getElementById('button_kit').style.backgroundColor = '#373741';
+    }
+
+    event.preventDefault();
+}
+
+function remplirInputSac(event) {
+    if (document.getElementById('optionSacId').value === 'Oui'){
+        document.getElementById('optionSacId').value = "Non";
+        document.getElementById('button_sac').style.backgroundColor = '#0d6efd';
+
+
+    } else {
+        document.getElementById('optionSacId').value = 'Oui';
+        document.getElementById('button_sac').style.backgroundColor = '#373741';
+    }
+    event.preventDefault();
+}
+
+function remplirInputAlarme(event) {
+
+
+    if (document.getElementById('optionAlarmeId').value === 'Oui'){
+        document.getElementById('optionAlarmeId').value = 'Non';
+        document.getElementById('button_alarme').style.backgroundColor = '#0d6efd';
+
+
+    } else {
+        document.getElementById('optionAlarmeId').value = 'Oui';
+        document.getElementById('button_alarme').style.backgroundColor = '#373741';
+    }
+
+    event.preventDefault();
+}
+
+
 

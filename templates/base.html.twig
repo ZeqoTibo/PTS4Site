@@ -59,24 +59,24 @@
         <div class="col-md-3">
             <h3><a href="{{ path('accueil') }}">Accueil</a></h3>
             <ul>
-                <li><a href="histoire">L'histoire de la piscine</a></li>
-                <li><a href="typesdepiscines">Les types de piscines</a></li>
-                <li><a href="realisations">Nos réalisations</a></li>
+                <li><a href="{{ path('accueil') }}#histoire">L'histoire de la piscine</a></li>
+                <li><a href="{{ path('accueil') }}#type">Les types de piscines</a></li>
+                <li><a href="{{ path('accueil') }}#carousel">Nos réalisations</a></li>
             </ul>
         </div>
         <div class="col-md-3">
             <h3><a href="{{ path('pageDevis') }}">Faire un devis</a></h3>
             <ul>
-                <li><a href="ronde">Piscines creusées ronde</a></li>
-                <li><a href="rectangle">Piscines creusées rectangulaire</a></li>
+                <li><a href="{{ path('pageDevis') }}#ronde">Piscines creusées ronde</a></li>
+                <li><a href="{{ path('pageDevis') }}#rectangle">Piscines creusées rectangulaire</a></li>
             </ul>
         </div>
         <div class="col-md-3">
             <h3><a href="{{ path('contact') }}">A propos de nous</a></h3>
             <ul>
-                <li><a href="#quisommesnous">Qui sommes-nous</a></li>
-                <li><a href="#entreprise">L'entreprise</a></li>
-                <li><a href="contact">Nous contacter</a></li>
+                <li><a href="{{ path('contact') }}#entreprise">L'entreprise</a></li>
+                <li><a href="{{ path('contact') }}#quisommesnous">Qui sommes-nous</a></li>
+                <li><a href="{{ path('contact') }}#contactDiv">Nous contacter</a></li>
             </ul>
         </div>
     </div>

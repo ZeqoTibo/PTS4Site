@@ -35,7 +35,7 @@ class Client
     /**
      * @ORM\Column(type="integer")
      */
-    private $Tel;
+    private $tel;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -90,12 +90,12 @@ class Client
 
     public function getTel(): ?int
     {
-        return $this->Tel;
+        return $this->tel;
     }
 
-    public function setTel(int $Tel): self
+    public function setTel(int $tel): self
     {
-        $this->Tel = $Tel;
+        $this->tel = $tel;
 
         return $this;
     }

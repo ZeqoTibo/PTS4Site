@@ -138,7 +138,7 @@ class DevisController extends AbstractController
             $devis->setForme($forme);
             $devis->setFond($fond);
             $devis->setCouleur($couleur);
-            $formDevis->setEmail("thibaultderouin5@gmail.com");
+         //   $formDevis->setEmail("thibaultderouin5@gmail.com");
 
             if($forme == 'Rectangulaire') {
                 $devis->setLargeur($largeur);
@@ -167,8 +167,9 @@ class DevisController extends AbstractController
                         ->setFrom('trochon.arthur@gmail.com')
 
                         // On attribue le destinataire
+                        // ->setTo($contact['email'])
 
-                        ->setTo($contact['email'])
+                        ->setTo('thibaultderouin5@gmail.com')
 
 
                         // On attribue le message avec la vue Twig

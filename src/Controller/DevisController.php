@@ -4,7 +4,9 @@
 namespace App\Controller;
 
 
+use App\Entity\Client;
 use App\Form\ContactType;
+use App\Entity\Devis;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,6 +27,7 @@ class DevisController extends AbstractController
         $forme_piscine = $request->request->get("choix1", "rectangulaire");
 
         $session->set('forme', $forme_piscine);
+
 
         return $this->render('site/fond.html.twig');
     }
@@ -95,7 +98,7 @@ class DevisController extends AbstractController
      */
     public function envoieDevisAction(SessionInterface $session, Request $request,\Swift_Mailer $mailer)
     {
-
+        $formDevis = new Client();
         $optionKit = $request->request->get("optionKit", "Non");
         $optionSac = $request->request->get("optionSac", "Non");
         $optionAlarme = $request->request->get("optionAlarme", "Non");
@@ -104,7 +107,7 @@ class DevisController extends AbstractController
         $session->set('sac', $optionSac);
         $session->set('alarme', $optionAlarme);
 
-        $form = $this->createForm(ContactType::class);
+        $form = $this->createForm(ContactType::class,$formDevis);
         $form->handleRequest($request);
 
 
@@ -125,6 +128,31 @@ class DevisController extends AbstractController
         }
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $clientManager = $this->getDoctrine()->getManager();
+
+
+            $devis = new Devis();
+
+            $devis->setForme($forme);
+            $devis->setFond($fond);
+            $devis->setCouleur($couleur);
+            $formDevis->setEmail("thibaultderouin5@gmail.com");
+
+            if($forme == 'Rectangulaire') {
+                $devis->setLargeur($largeur);
+                $devis->setLongueur($longueur);
+            } else if ($forme == 'Ronde') {
+                $devis->setDiametre($diametre);
+            }
+
+            $entityManager->persist($devis);
+            $clientManager->persist($formDevis);
+
+            $entityManager->flush();
+            $clientManager->flush();
+
             switch ($forme){
 
                 default;
@@ -139,7 +167,9 @@ class DevisController extends AbstractController
                         ->setFrom('trochon.arthur@gmail.com')
 
                         // On attribue le destinataire
+
                         ->setTo($contact['email'])
+
 
                         // On attribue le message avec la vue Twig
                         ->setBody(
@@ -178,6 +208,7 @@ class DevisController extends AbstractController
                     $this->addFlash('message', 'Votre message a été transmis, nous vous répondrons dans les meilleurs délais.'); // Permet un message flash de renvoi
                     return $this->redirectToRoute('accueil');
             }
+
         }
 
 

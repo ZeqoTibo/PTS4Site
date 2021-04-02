@@ -167,9 +167,7 @@ class DevisController extends AbstractController
                         ->setFrom('trochon.arthur@gmail.com')
 
                         // On attribue le destinataire
-                        // ->setTo($contact['email'])
-
-                        ->setTo('thibaultderouin5@gmail.com')
+                        ->setTo($contact->getEmail())
 
 
                         // On attribue le message avec la vue Twig
